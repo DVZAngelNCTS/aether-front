@@ -1,23 +1,28 @@
-import { notFound } from 'next/navigation';
-import { ChapterReader } from '@/components/reader/chapter-reader';
-import { getMockWorkBySlug, getChapterByNumber } from '@/data/reader-data';
+import { notFound } from "next/navigation";
+import { ChapterReader } from "@/components/reader/chapter-reader";
+import { getMockWorkBySlug, getChapterByNumber } from "@/data/reader-data";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     slug: string;
     chapter: string;
-  };
+  }>;
 };
 
-export default function ChapterPage({ params }: PageProps) {
-  const work = getMockWorkBySlug(params.slug);
+export default async function ChapterPage({ params }: PageProps) {
+  const { slug, chapter } = await params;
+
+  const work = getMockWorkBySlug(slug);
 
   if (!work) {
     notFound();
   }
 
-  const requestedChapter = Number(params.chapter);
-  const safeRequestedChapter = Number.isNaN(requestedChapter) ? -1 : requestedChapter;
+  const requestedChapter = Number(chapter);
+  const safeRequestedChapter = Number.isNaN(requestedChapter)
+    ? -1
+    : requestedChapter;
+
   const currentChapter = getChapterByNumber(work, safeRequestedChapter);
 
   return (
