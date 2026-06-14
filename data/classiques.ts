@@ -1,0 +1,15 @@
+import type { Oeuvre } from "./oeuvres";
+
+// À remplacer par : fetch("/api/oeuvres?statut=Terminé&note_min=4.8&chapitres_min=200&tri=note")
+export const CLASSIQUES: Oeuvre[] = [
+  { id: 120, slug: "eternal-dawn",   titre: "Eternal Dawn",   type: "Manga",   chapitres: 400, statut: "Terminé",  description: "Après l'apocalypse, des survivants portent en eux les fragments d'une ancienne magie oubliée.",              couverture: "https://picsum.photos/seed/dawn/300/420"     },
+  { id: 121, slug: "cursed-lineage", titre: "Cursed Lineage", type: "Manga",   chapitres: 430, statut: "Terminé",  description: "Chaque héritier de la famille Rao naît avec une malédiction qu'il doit briser avant ses 20 ans.",           couverture: "https://picsum.photos/seed/lineage/300/420"  },
+  { id: 122, slug: "blood-sigil",    titre: "Blood Sigil",    type: "Webtoon", chapitres: 310, statut: "Terminé",  description: "Des signes mystérieux confèrent des pouvoirs aux élus, au prix de leur propre vie.",                        couverture: "https://picsum.photos/seed/sigil/300/420"    },
+  { id: 123, slug: "golden-tyrant",  titre: "Golden Tyrant",  type: "Manhwa",  chapitres: 365, statut: "Terminé",  description: "Un roi immortel ayant régné mille ans décide d'abdiquer — mais son empire refuse de le laisser partir.",   couverture: "https://picsum.photos/seed/tyrant/300/420"   },
+  { id: 124, slug: "runed-world",    titre: "Runed World",    type: "Manhwa",  chapitres: 333, statut: "Terminé",  description: "Le monde entier est une rune géante — celui qui en déchiffre le centre devient dieu.",                     couverture: "https://picsum.photos/seed/runed/300/420"    },
+  { id: 125, slug: "end-of-spires",  titre: "End of Spires",  type: "Webtoon", chapitres: 242, statut: "Terminé",  description: "La chute des dernières tours magiques marque la fin d'une civilisation et la naissance d'une autre.",       couverture: "https://picsum.photos/seed/spires/300/420"   },
+  { id: 126, slug: "iron-verdict",   titre: "Iron Verdict",   type: "Manhwa",  chapitres: 280, statut: "Terminé",  description: "Un juge incorruptible dans un empire corrompu découvre que la loi elle-même est un mensonge.",              couverture: "https://picsum.photos/seed/verdict/300/420"  },
+  { id: 127, slug: "phantom-gate",   titre: "Phantom Gate",   type: "Manga",   chapitres: 156, statut: "Terminé",  description: "Un détective des mondes parallèles traque des entités spectrales infiltrant le monde réel.",               couverture: "https://picsum.photos/seed/phantom/300/420"  },
+  { id: 128, slug: "silver-shore",   titre: "Silver Shore",   type: "Manhwa",  chapitres: 198, statut: "Terminé",  description: "Une île mystérieuse réapparaît tous les cent ans — ceux qui y débarquent n'en reviennent jamais.",         couverture: "https://picsum.photos/seed/shore/300/420"    },
+  { id: 129, slug: "the-last-oracle",titre: "The Last Oracle", type: "Manhwa",  chapitres: 88,  statut: "Terminé",  description: "La dernière prophétesse vivante doit choisir entre sauver le monde ou le laisser mourir dignement.",       couverture: "https://picsum.photos/seed/oracle/300/420"   },
+];

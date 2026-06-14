@@ -1,0 +1,13 @@
+import type { Oeuvre } from "./oeuvres";
+
+// À remplacer par : fetch("/api/lectures?statut=pause,abandonne&utilisateur=moi")
+export const OEUVRES_PAUSE: Oeuvre[] = [
+  { id: 110, slug: "iron-dominion",   titre: "Iron Dominion",   type: "Manhwa",  chapitres: 12,  statut: "En pause",   description: "Un empire de métal gouverné par une IA décide un jour de reconnaître les droits des humains.",             couverture: "https://picsum.photos/seed/iron/300/420"      },
+  { id: 111, slug: "pale-garden",     titre: "Pale Garden",     type: "Manga",   chapitres: 8,   statut: "En pause",   description: "Une jardinière découvre que ses plantes absorbent les souvenirs des morts enterrés sous sa maison.",      couverture: "https://picsum.photos/seed/garden/300/420"    },
+  { id: 112, slug: "veil-of-ash",     titre: "Veil of Ash",     type: "Manhwa",   chapitres: 43,  statut: "En pause",   description: "Dans un monde recouvert de cendres, les derniers humains vivent sous des dômes de verre suspendus.",      couverture: "https://picsum.photos/seed/ash/300/420"       },
+  { id: 113, slug: "night-sovereign", titre: "Night Sovereign", type: "Manhwa",  chapitres: 96,  statut: "Abandonné",  description: "Un roi fantôme revient régner sur les vivants après que son trône a été volé par trahison.",             couverture: "https://picsum.photos/seed/sovereign/300/420" },
+  { id: 114, slug: "neon-spirit",     titre: "Neon Spirit",     type: "Manhwa",  chapitres: 54,  statut: "Abandonné",  description: "Dans une mégalopole cyberpunk, un hacker découvre que sa conscience peut voyager dans les réseaux.",      couverture: "https://picsum.photos/seed/neon/300/420"      },
+  { id: 115, slug: "silver-eclipse",  titre: "Silver Eclipse",  type: "Webtoon", chapitres: 103, statut: "En pause",   description: "Une chasseuse de vampires découvre qu'elle est elle-même à moitié vampire après une morsure mystérieuse.", couverture: "https://picsum.photos/seed/eclipse/300/420"   },
+  { id: 116, slug: "echo-blade",      titre: "Echo Blade",      type: "Manhwa",  chapitres: 27,  statut: "Abandonné",  description: "Une épée qui reproduit les derniers mots de ses victimes tombe entre les mains d'un assassin repenti.",   couverture: "https://picsum.photos/seed/echo/300/420"      },
+  { id: 117, slug: "dusk-engine",     titre: "Dusk Engine",     type: "Manhwa",  chapitres: 112, statut: "En pause",   description: "Dans un monde steampunk, une ingénieure construit une machine capable de ressusciter les morts.",          couverture: "https://picsum.photos/seed/dusk/300/420"      },
+];

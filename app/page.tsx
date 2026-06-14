@@ -1,65 +1,175 @@
-import Image from "next/image";
+import CarouselOeuvres from "@/components/CarouselOeuvres";
+import SectionReprendreLecture from "@/components/SectionReprendreLecture";
+import SectionListeOeuvres from "@/components/SectionListeOeuvres";
+import SectionOeuvreAleatoire from "@/components/SectionOeuvreAleatoire";
+import SkeletonSectionReprendreLecture from "@/components/skeletons/SkeletonSectionReprendreLecture";
+import SkeletonSectionListeOeuvres from "@/components/skeletons/SkeletonSectionListeOeuvres";
+import SkeletonSectionOeuvreAleatoire from "@/components/skeletons/SkeletonSectionOeuvreAleatoire";
+
+import { RECOMMANDATIONS } from "@/data/recommandations";
+import { NOUVEAUTES } from "@/data/nouveautes";
+import { PLUS_POPULAIRES } from "@/data/plusPopulaires";
+import { OEUVRES_TERMINEES } from "@/data/oeuvresTerminees";
+import { DERNIERS_CHAPITRES } from "@/data/derniersChapitres";
+import { OEUVRES_MIEUX_NOTEES } from "@/data/oeuvresMieuxNotees";
+import { VOUS_AIMERIEZ } from "@/data/vousAimeriez";
+import { OEUVRES_PAUSE } from "@/data/oeuvresPause";
+import { CLASSIQUES } from "@/data/classiques";
+import { LECTURES_RAPIDES } from "@/data/lecturesRapides";
+import { LU_EN_UNE_SOIREE } from "@/data/luEnUneSoiree";
+import { COUP_DE_COEUR } from "@/data/coupDeCoeur";
+import { DECOUVRIR_GENRE } from "@/data/decouvrirGenre";
+import { REPRENNENT_DU_SERVICE } from "@/data/reprennentDuService";
+import { PEPITES_SOUS_COTEES } from "@/data/pepitesSousCotees";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main className="min-h-screen bg-bg-base">
+      {/* Bannière */}
+      <CarouselOeuvres />
+
+      {/* Sections personnalisées — utilisateur connecté */}
+      <Suspense fallback={<SkeletonSectionReprendreLecture />}>
+        <SectionReprendreLecture />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionListeOeuvres />}>
+        <SectionListeOeuvres
+          titre="Derniers chapitres"
+          titreViolet="publiés"
+          oeuvres={DERNIERS_CHAPITRES}
+          lienVoirTout="/catalogue?tri=recent"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionListeOeuvres />}>
+        <SectionListeOeuvres
+          titre="Parce que vous avez lu :"
+          titreViolet={RECOMMANDATIONS.baseSurOeuvre}
+          oeuvres={RECOMMANDATIONS.oeuvres}
+        />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionListeOeuvres />}>
+        <SectionListeOeuvres
+          titre="Vous pourriez aussi"
+          titreViolet="aimer"
+          oeuvres={VOUS_AIMERIEZ}
+        />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionListeOeuvres />}>
+        <SectionListeOeuvres
+          titre="Œuvres en pause"
+          titreViolet="ou abandonnées"
+          oeuvres={OEUVRES_PAUSE}
+          lienVoirTout="/mes-lectures?statut=pause"
+        />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionListeOeuvres />}>
+        <SectionListeOeuvres
+          titre="Nouveautés"
+          titreViolet="sur AetherScan"
+          oeuvres={NOUVEAUTES}
+          lienVoirTout="/catalogue?tri=recent"
+        />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionListeOeuvres />}>
+        <SectionListeOeuvres
+          titre="Les plus populaires"
+          titreViolet="cette semaine"
+          oeuvres={PLUS_POPULAIRES}
+          lienVoirTout="/catalogue?tri=populaire"
+        />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionListeOeuvres />}>
+        <SectionListeOeuvres
+          titre="Classiques"
+          titreViolet="incontournables"
+          oeuvres={CLASSIQUES}
+          lienVoirTout="/catalogue?tri=note&statut=termine"
+        />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionListeOeuvres />}>
+        <SectionListeOeuvres
+          titre="Œuvres les mieux"
+          titreViolet="notées"
+          oeuvres={OEUVRES_MIEUX_NOTEES}
+          lienVoirTout="/catalogue?tri=note"
+        />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionListeOeuvres />}>
+        <SectionListeOeuvres
+          titre="Œuvres"
+          titreViolet="terminées"
+          oeuvres={OEUVRES_TERMINEES}
+          lienVoirTout="/catalogue?statut=termine"
+        />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionListeOeuvres />}>
+        <SectionListeOeuvres
+          titre="Lectures"
+          titreViolet="rapides"
+          oeuvres={LECTURES_RAPIDES}
+          lienVoirTout="/catalogue?statut=termine&chapitres_max=50"
+        />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionListeOeuvres />}>
+        <SectionListeOeuvres
+          titre="Lu en"
+          titreViolet="une soirée"
+          oeuvres={LU_EN_UNE_SOIREE}
+          lienVoirTout="/catalogue?statut=termine&chapitres_max=10"
+        />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionListeOeuvres />}>
+        <SectionListeOeuvres
+          titre="Coup de cœur"
+          titreViolet="de l'équipe"
+          oeuvres={COUP_DE_COEUR}
+          lienVoirTout="/catalogue?selection=coup-de-coeur"
+        />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionListeOeuvres />}>
+        <SectionListeOeuvres
+          titre="Découvrez le genre :"
+          titreViolet={DECOUVRIR_GENRE.genre}
+          oeuvres={DECOUVRIR_GENRE.oeuvres}
+          lienVoirTout={`/catalogue?genre=${DECOUVRIR_GENRE.genre.toLowerCase()}`}
+        />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionListeOeuvres />}>
+        <SectionListeOeuvres
+          titre="Reprennent"
+          titreViolet="du service"
+          oeuvres={REPRENNENT_DU_SERVICE}
+          lienVoirTout="/catalogue?filtre=reprise"
+        />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionListeOeuvres />}>
+        <SectionListeOeuvres
+          titre="Pépites"
+          titreViolet="sous-cotées"
+          oeuvres={PEPITES_SOUS_COTEES}
+          lienVoirTout="/catalogue?filtre=pepites"
+        />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonSectionOeuvreAleatoire />}>
+        <SectionOeuvreAleatoire />
+      </Suspense>
+    </main>
   );
 }

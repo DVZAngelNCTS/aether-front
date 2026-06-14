@@ -1,0 +1,15 @@
+import type { Oeuvre } from "./oeuvres";
+
+// À remplacer par : fetch("/api/oeuvres?tri=date-ajout&ordre=desc")
+export const NOUVEAUTES: Oeuvre[] = [
+  { id: 80, slug: "iron-dominion",    titre: "Iron Dominion",    type: "Manhwa",  chapitres: 12,  statut: "En cours",  description: "Un empire de métal gouverné par une IA décide un jour de reconnaître les droits des humains.",              couverture: "https://picsum.photos/seed/iron/300/420"      },
+  { id: 81, slug: "pale-garden",      titre: "Pale Garden",      type: "Manga",   chapitres: 8,   statut: "En cours",  description: "Une jardinière découvre que ses plantes absorbent les souvenirs des morts enterrés sous sa maison.",       couverture: "https://picsum.photos/seed/garden/300/420"    },
+  { id: 82, slug: "twin-moons",       titre: "Twin Moons",       type: "Webtoon", chapitres: 21,  statut: "En cours",  description: "Deux sœurs nées sous deux lunes différentes sont condamnées à ne jamais se rencontrer.",                  couverture: "https://picsum.photos/seed/twins/300/420"     },
+  { id: 83, slug: "wraith-code",      titre: "Wraith Code",      type: "Manhwa",  chapitres: 15,  statut: "En cours",  description: "Un programmeur mort se retrouve piégé dans le dernier jeu qu'il a créé avant de mourir.",                couverture: "https://picsum.photos/seed/wraith/300/420"    },
+  { id: 84, slug: "black-compass",    titre: "Black Compass",    type: "Manga",   chapitres: 6,   statut: "En cours",  description: "Une boussole qui pointe vers les regrets guide un explorateur à travers des dimensions perdues.",         couverture: "https://picsum.photos/seed/compass/300/420"   },
+  { id: 85, slug: "silver-dust",      titre: "Silver Dust",      type: "Manhwa",  chapitres: 33,  statut: "En cours",  description: "La poussière d'étoile tombée sur Terre il y a mille ans s'éveille sous la forme d'une adolescente.",     couverture: "https://picsum.photos/seed/dust/300/420"      },
+  { id: 86, slug: "forge-of-gods",    titre: "Forge of Gods",    type: "Manhwa",  chapitres: 18,  statut: "En cours",  description: "Un forgeron mortel reçoit la mission de réparer les armes brisées des dieux après la grande guerre.",    couverture: "https://picsum.photos/seed/forge/300/420"     },
+  { id: 87, slug: "last-cartographer",titre: "Last Cartographer", type: "Manhwa",  chapitres: 9,   statut: "En cours",  description: "Le dernier cartographe vivant dresse la carte d'un monde qui disparaît kilomètre par kilomètre.",         couverture: "https://picsum.photos/seed/carto/300/420"     },
+  { id: 88, slug: "echo-blade",       titre: "Echo Blade",       type: "Manhwa",  chapitres: 27,  statut: "En cours",  description: "Une épée qui reproduit les derniers mots de ses victimes tombe entre les mains d'un assassin repenti.",   couverture: "https://picsum.photos/seed/echo/300/420"      },
+  { id: 89, slug: "amber-throne",     titre: "Amber Throne",     type: "Manga",   chapitres: 44,  statut: "En cours",  description: "Un royaume prisonnier dans l'ambre depuis des siècles reprend vie lorsqu'une fissure apparaît.",          couverture: "https://picsum.photos/seed/amber/300/420"     },
+];

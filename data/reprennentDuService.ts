@@ -1,0 +1,14 @@
+import type { Oeuvre } from "./oeuvres";
+
+// À remplacer par : fetch("/api/oeuvres?statut=En cours&reprise=true&tri=date-reprise")
+// Œuvres qui étaient en pause depuis +3 mois et ont repris la publication
+export const REPRENNENT_DU_SERVICE: Oeuvre[] = [
+  { id: 170, slug: "night-sovereign",  titre: "Night Sovereign",  type: "Manhwa",  chapitres: 96,  statut: "En cours", description: "Un roi fantôme revient régner sur les vivants après que son trône a été volé par trahison.",             couverture: "https://picsum.photos/seed/sovereign/300/420" },
+  { id: 171, slug: "neon-spirit",      titre: "Neon Spirit",      type: "Manhwa",  chapitres: 54,  statut: "En cours", description: "Dans une mégalopole cyberpunk, un hacker découvre que sa conscience peut voyager dans les réseaux.",      couverture: "https://picsum.photos/seed/neon/300/420"      },
+  { id: 172, slug: "silver-eclipse",   titre: "Silver Eclipse",   type: "Webtoon", chapitres: 103, statut: "En cours", description: "Une chasseuse de vampires découvre qu'elle est elle-même à moitié vampire après une morsure mystérieuse.", couverture: "https://picsum.photos/seed/eclipse/300/420"   },
+  { id: 173, slug: "frozen-empire",    titre: "Frozen Empire",    type: "Manhwa",  chapitres: 96,  statut: "En cours", description: "Un empire pris dans la glace depuis trois siècles dégèle en une seule nuit, avec tous ses habitants.",      couverture: "https://picsum.photos/seed/frozen/300/420"    },
+  { id: 174, slug: "iron-dominion",    titre: "Iron Dominion",    type: "Manhwa",  chapitres: 12,  statut: "En cours", description: "Un empire de métal gouverné par une IA décide un jour de reconnaître les droits des humains.",             couverture: "https://picsum.photos/seed/iron/300/420"      },
+  { id: 175, slug: "echo-blade",       titre: "Echo Blade",       type: "Manhwa",  chapitres: 27,  statut: "En cours", description: "Une épée qui reproduit les derniers mots de ses victimes tombe entre les mains d'un assassin repenti.",   couverture: "https://picsum.photos/seed/echo/300/420"      },
+  { id: 176, slug: "void-hunter",      titre: "Void Hunter",      type: "Manhwa",  chapitres: 88,  statut: "En cours", description: "Un chasseur de primes solitaire traque des créatures interdimensionnelles dans un futur dystopique.",     couverture: "https://picsum.photos/seed/void/300/420"      },
+  { id: 177, slug: "abyss-walker",     titre: "Abyss Walker",     type: "Manhwa",  chapitres: 79,  statut: "En cours", description: "Plongé dans un donjon sans fin, un aventurier découvre qu'il est le donjon lui-même.",                    couverture: "https://picsum.photos/seed/abyss/300/420"     },
+];

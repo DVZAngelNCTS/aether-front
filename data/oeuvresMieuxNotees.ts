@@ -1,0 +1,15 @@
+import type { Oeuvre } from "./oeuvres";
+
+// À remplacer par : fetch("/api/oeuvres?tri=note&ordre=desc")
+export const OEUVRES_MIEUX_NOTEES: Oeuvre[] = [
+  { id: 70, slug: "eternal-dawn",     titre: "Eternal Dawn",     type: "Manga",   chapitres: 400, statut: "Terminé",  description: "Après l'apocalypse, des survivants portent en eux les fragments d'une ancienne magie oubliée.",              couverture: "https://picsum.photos/seed/dawn/300/420"      },
+  { id: 71, slug: "cursed-lineage",   titre: "Cursed Lineage",   type: "Manga",   chapitres: 430, statut: "Terminé",  description: "Chaque héritier de la famille Rao naît avec une malédiction qu'il doit briser avant ses 20 ans.",           couverture: "https://picsum.photos/seed/lineage/300/420"   },
+  { id: 72, slug: "shadow-realm",     titre: "Shadow Realm",     type: "Manhwa",  chapitres: 149, statut: "En cours", description: "Un jeune guerrier découvre qu'il est le seul capable de fermer les portes entre les mondes des ombres.",   couverture: "https://picsum.photos/seed/shadow/300/420"    },
+  { id: 73, slug: "obsidian-king",    titre: "Obsidian King",    type: "Manga",   chapitres: 276, statut: "En cours", description: "Né sans magie dans un monde saturé de pouvoir, un enfant forge sa voie par la seule force de sa volonté.", couverture: "https://picsum.photos/seed/obsidian/300/420"  },
+  { id: 74, slug: "blood-sigil",      titre: "Blood Sigil",      type: "Webtoon", chapitres: 310, statut: "Terminé",  description: "Des signes mystérieux confèrent des pouvoirs aux élus, au prix de leur propre vie.",                       couverture: "https://picsum.photos/seed/sigil/300/420"     },
+  { id: 75, slug: "runed-world",      titre: "Runed World",      type: "Manhwa",  chapitres: 333, statut: "Terminé",  description: "Le monde entier est une rune géante — celui qui en déchiffre le centre devient dieu.",                    couverture: "https://picsum.photos/seed/runed/300/420"     },
+  { id: 76, slug: "golden-tyrant",    titre: "Golden Tyrant",    type: "Manhwa",  chapitres: 365, statut: "Terminé",  description: "Un roi immortel ayant régné mille ans décide d'abdiquer — mais son empire refuse de le laisser partir.",  couverture: "https://picsum.photos/seed/tyrant/300/420"    },
+  { id: 77, slug: "dark-covenant",    titre: "Dark Covenant",    type: "Manhwa",  chapitres: 204, statut: "En cours", description: "Un pacte scellé dans le sang lie deux ennemis jurés dans leur quête pour renverser un dieu obscur.",      couverture: "https://picsum.photos/seed/covenant/300/420"  },
+  { id: 78, slug: "crimson-throne",   titre: "Crimson Throne",   type: "Webtoon", chapitres: 221, statut: "En cours", description: "La fille d'un roi déchu reconquiert son trône en s'alliant à ses pires ennemis.",                        couverture: "https://picsum.photos/seed/crimson/300/420"   },
+  { id: 79, slug: "end-of-spires",    titre: "End of Spires",    type: "Webtoon", chapitres: 242, statut: "Terminé",  description: "La chute des dernières tours magiques marque la fin d'une civilisation et la naissance d'une autre.",      couverture: "https://picsum.photos/seed/spires/300/420"    },
+];

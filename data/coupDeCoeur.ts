@@ -1,0 +1,14 @@
+import type { Oeuvre } from "./oeuvres";
+
+// À remplacer par : fetch("/api/selections/coup-de-coeur")
+// Mise à jour manuelle par l'équipe AetherScan chaque semaine
+export const COUP_DE_COEUR: Oeuvre[] = [
+  { id: 150, slug: "the-ferryman",      titre: "The Ferryman",      type: "Manhwa",  chapitres: 2,   statut: "Terminé",  description: "Un passeur de rivière transporte les âmes qui ne savent pas encore qu'elles sont mortes.",                  couverture: "https://picsum.photos/seed/ferry/300/420"     },
+  { id: 151, slug: "silent-pantheon",   titre: "Silent Pantheon",   type: "Manga",   chapitres: 201, statut: "Terminé",  description: "Les dieux se taisent depuis cent ans — un prêtre part les chercher dans les profondeurs de la terre.",       couverture: "https://picsum.photos/seed/pantheon/300/420"  },
+  { id: 152, slug: "verdant-chaos",     titre: "Verdant Chaos",     type: "Manga",   chapitres: 74,  statut: "En cours", description: "La forêt primaire prend conscience d'elle-même et décide de reprendre ce que les humains lui ont volé.",    couverture: "https://picsum.photos/seed/verdant/300/420"   },
+  { id: 153, slug: "glass-wolf",        titre: "Glass Wolf",        type: "Manga",   chapitres: 4,   statut: "Terminé",  description: "Un loup de verre traverse la forêt des illusions pour retrouver la mémoire qu'il a laissée derrière lui.", couverture: "https://picsum.photos/seed/wolf/300/420"      },
+  { id: 154, slug: "dusk-engine",       titre: "Dusk Engine",       type: "Manhwa",  chapitres: 112, statut: "En cours", description: "Dans un monde steampunk, une ingénieure construit une machine capable de ressusciter les morts.",           couverture: "https://picsum.photos/seed/dusk/300/420"      },
+  { id: 155, slug: "fading-star",       titre: "Fading Star",       type: "Webtoon", chapitres: 6,   statut: "Terminé",  description: "La dernière étoile visible à l'œil nu s'éteint — et un astronome refuse de l'accepter.",                  couverture: "https://picsum.photos/seed/fading/300/420"    },
+  { id: 156, slug: "cursed-atlas",      titre: "Cursed Atlas",      type: "Manga",   chapitres: 130, statut: "En cours", description: "Un atlas qui montre les endroits où des crimes ont été commis guide involontairement un détective.",        couverture: "https://picsum.photos/seed/atlas/300/420"     },
+  { id: 157, slug: "white-noise",       titre: "White Noise",       type: "Manga",   chapitres: 8,   statut: "Terminé",  description: "Une pianiste aveugle compose des morceaux que seuls les fantômes peuvent entendre.",                       couverture: "https://picsum.photos/seed/noise/300/420"     },
+];

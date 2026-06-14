@@ -1,0 +1,16 @@
+import type { Oeuvre } from "./oeuvres";
+
+// À remplacer par : fetch("/api/oeuvres?vues_max=10000&note_min=4.5&tri=note")
+// Bonnes notes mais peu de vues — les trésors cachés du catalogue
+export const PEPITES_SOUS_COTEES: Oeuvre[] = [
+  { id: 180, slug: "the-weight",        titre: "The Weight",        type: "Manhwa",   chapitres: 1,   statut: "Terminé",  description: "Un homme porte sur son dos le poids exact de tous ses regrets — et décide un matin de le poser.",          couverture: "https://picsum.photos/seed/weight/300/420"    },
+  { id: 181, slug: "one-last-door",     titre: "One Last Door",     type: "Webtoon", chapitres: 5,   statut: "Terminé",  description: "Une femme face à une porte qui mène à n'importe quel moment de sa vie passée, une seule fois.",             couverture: "https://picsum.photos/seed/door/300/420"      },
+  { id: 182, slug: "last-cartographer", titre: "Last Cartographer", type: "Manhwa",   chapitres: 9,   statut: "En cours", description: "Le dernier cartographe vivant dresse la carte d'un monde qui disparaît kilomètre par kilomètre.",          couverture: "https://picsum.photos/seed/carto/300/420"     },
+  { id: 183, slug: "red-covenant",      titre: "Red Covenant",      type: "Manhwa",  chapitres: 59,  statut: "En cours", description: "Un pacte de sang entre deux clans ennemis contraint leurs héritiers à coopérer pour survivre.",             couverture: "https://picsum.photos/seed/redcov/300/420"    },
+  { id: 184, slug: "twin-daggers",      titre: "Twin Daggers",      type: "Manhwa",  chapitres: 167, statut: "En cours", description: "Deux assassins qui partagent le même corps alternent le contrôle selon l'heure du jour.",                   couverture: "https://picsum.photos/seed/daggers/300/420"   },
+  { id: 185, slug: "paper-crown",       titre: "Paper Crown",       type: "Webtoon", chapitres: 47,  statut: "Terminé",  description: "Une roturière reçoit par erreur la couronne d'un empire et doit apprendre à régner en une nuit.",           couverture: "https://picsum.photos/seed/paper/300/420"     },
+  { id: 186, slug: "storm-herald",      titre: "Storm Herald",      type: "Manhwa",  chapitres: 87,  statut: "En cours", description: "Un héraut des tempêtes traverse des royaumes en guerre pour livrer un message qui pourrait tout arrêter.",  couverture: "https://picsum.photos/seed/storm/300/420"     },
+  { id: 187, slug: "amber-throne",      titre: "Amber Throne",      type: "Manga",   chapitres: 44,  statut: "En cours", description: "Un royaume prisonnier dans l'ambre depuis des siècles reprend vie lorsqu'une fissure apparaît.",           couverture: "https://picsum.photos/seed/amber/300/420"     },
+  { id: 188, slug: "forge-of-gods",     titre: "Forge of Gods",     type: "Manhwa",  chapitres: 18,  statut: "En cours", description: "Un forgeron mortel reçoit la mission de réparer les armes brisées des dieux après la grande guerre.",      couverture: "https://picsum.photos/seed/forge/300/420"     },
+  { id: 189, slug: "silver-dust",       titre: "Silver Dust",       type: "Manhwa",  chapitres: 33,  statut: "En cours", description: "La poussière d'étoile tombée sur Terre il y a mille ans s'éveille sous la forme d'une adolescente.",      couverture: "https://picsum.photos/seed/dust/300/420"      },
+];
